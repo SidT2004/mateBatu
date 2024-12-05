@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-family: sans-serif;
+  background-color: black;
+
+}
+
+body {
+  background: #fff7ee;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.main{
+  height: 100vh;
+  background-color: black;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login{
+  border: 1.9px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255 , 0.08);
+  border-radius: 40px;
+
+}
+
+.login h1{
+  color: #DFDEDC;
+  font-size: medium;
+}
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.loginForm input{
+  width: 300px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: large;
+  background-color: transparent;
+  outline: none;
+  border: 1.5px solid white;
+  padding: 1vh;
+  color: #DFDEDC;
+  
+}
+.loginBtn{
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  background-color:rgb(47, 47, 177)  ;
+  border: none;
+}
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.name{
+  color:rgb(47, 47, 177);
+  font-size: 3vh;
+}
+.loginQn{
+  text-decoration: underline;
+}
+
+.select{
+  background-color: transparent;
+  font-size: medium;
+  padding: 2px 2px;
+  outline: none;
+  border-radius: 3px;
+}
+.inputContainer2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+.signupForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.select option{
+  background-color: black;
+  outline: none;
+}
+.mobileHome{
+  color: black;
+}
+.heading{
+  color:black;
+}
+.homeDesktop{
+  width: 100vw;
+}
+.homeDesktop {
+  padding: 16px;
+  text-align: center;
+}
+
+.homeDesktop h1 {
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .homeDesktop h1 {
+    font-size: 36px;
+    color: white;
+  }
+}
+
+.homeDesktop button {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+
+.loadingText{
+  color: black;
+}
+.firstStep{
+  display: flex ;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.firstStep h1{
+  font-size: large;
+  font-family:'Trebuchet MS';
+}
+.firstStep button{
+  padding: 10px 10px ;
+  border-radius: 10px;
+  background-color: rgb(47, 47, 177) ;
+  outline: none;
+  font-size: 3vh;
+  border: 1px solid white;
+  color: black;
+
+}
+
+.chat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inputBox{
+  background-color: black;
+  color: white;
+  border: none
+}
+.messageInputWrapper{
+  width: 100%;
+  border: 2px solid red;
+}
+.loadingText{
+  color: white;
+}
