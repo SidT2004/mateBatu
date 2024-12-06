@@ -12,7 +12,7 @@ export const socket = io(URL, {
 });
 
 const Socket = () => {
-    const { setUserId, setIsConnected, setMessages, setOnlineUsers, receiver, setReceiver, setIsSearching, setIsTyping, setMessage, setIsSending } = useChat()
+    const { setUserId, setIsConnected, setMessages, setOnlineUsers, receiver, setReceiver, setIsSearching, setIsTyping, setMessage, setIsSending,mateId } = useChat()
 
     useEffect(() => {
         socket.connect();

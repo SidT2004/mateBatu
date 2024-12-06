@@ -12,6 +12,7 @@ const ChatContextProvider = ({ children }) => {
     const [isTyping, setIsTyping] = useState(false);
     const [isSending, setIsSending] = useState(false);
     const [message, setMessage] = useState("");
+    const [mateId, setMateId] = useState("");
 
     return (
         <>

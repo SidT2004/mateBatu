@@ -1,56 +1,56 @@
-let onlineUsers = [];
-let unpairedUsers = [];
+    let onlineUsers = [];
+    let unpairedUsers = [];
 
-const addUser = (userId, socketId) => {
-    const existingUser = onlineUsers.find(user => user.userId === userId)
-    const existingUser_ = onlineUsers.find(user => user.socketId === socketId)
+    const addUser = (userId, socketId) => {
+        const existingUser = onlineUsers.find(user => user.userId === userId)
+        const existingUser_ = onlineUsers.find(user => user.socketId === socketId)
 
-    if (existingUser) {
-        return { error: "Userid is taken" }
-    }
-    if (existingUser_) {
-        removeUser(socketId)
-    }
+        if (existingUser) {
+            return { error: "Userid is taken" }
+        }
+        if (existingUser_) {
+            removeUser(socketId)
+        }
 
-    const user = { userId, socketId }
-    onlineUsers.push(user)
+        const user = { userId, socketId }
+        onlineUsers.push(user)
 
-    return { user }
-}
-
-const addUnpairedUser = (userId) => {
-    const existingUser = unpairedUsers.find(user => user === userId)
-
-    if (existingUser) {
-        return { error: "User already unPaired" }
+        return { user }
     }
 
-    unpairedUsers.push(userId)
+    const addUnpairedUser = (userId) => {
+        const existingUser = unpairedUsers.find(user => user === userId)
 
-    return {}
-}
+        if (existingUser) {
+            return { error: "User already unPaired" }
+        }
 
-const removeUser = (socketId) => {
-    const allOnlineUsers = [...onlineUsers]
-    const filteredOnlineUsers = onlineUsers.filter(user => user.socketId !== socketId)
+        unpairedUsers.push(userId)
 
-    onlineUsers = filteredOnlineUsers
+        return {}
+    }
 
-    return allOnlineUsers.find((user) => user.socketId === socketId)
-}
+    const removeUser = (socketId) => {
+        const allOnlineUsers = [...onlineUsers]
+        const filteredOnlineUsers = onlineUsers.filter(user => user.socketId !== socketId)
 
-const removeUnpairedUser = (userId) => {
-    const filteredUnpairedUsers = unpairedUsers.filter((user) => user !== userId)
+        onlineUsers = filteredOnlineUsers
 
-    unpairedUsers = filteredUnpairedUsers
-}
+        return allOnlineUsers.find((user) => user.socketId === socketId)
+    }
 
-const getUser = (userId) => onlineUsers.find(user => user.userId === userId)
+    const removeUnpairedUser = (userId) => {
+        const filteredUnpairedUsers = unpairedUsers.filter((user) => user !== userId)
 
-const getUsers = () => onlineUsers
+        unpairedUsers = filteredUnpairedUsers
+    }
 
-const getUnpairedUsers = () => unpairedUsers
+    const getUser = (userId) => onlineUsers.find(user => user.userId === userId)
 
-module.exports = {
-    getUser, removeUser, addUser, getUsers, addUnpairedUser, getUnpairedUsers, removeUnpairedUser
-}
+    const getUsers = () => onlineUsers
+
+    const getUnpairedUsers = () => unpairedUsers
+
+    module.exports = {
+        getUser, removeUser, addUser, getUsers, addUnpairedUser, getUnpairedUsers, removeUnpairedUser
+    }

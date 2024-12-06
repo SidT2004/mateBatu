@@ -20,6 +20,7 @@ a {
 
 .main{
   height: 100vh;
+  width: 100vw;
   background-color: black;
   display: flex ;
   align-items: center;
@@ -162,7 +163,7 @@ a {
   font-size: 3vh;
   border: 1px solid white;
   color: black;
-
+  cursor: pointer;
 }
 
 .chat{
@@ -176,10 +177,94 @@ a {
   color: white;
   border: none
 }
-.messageInputWrapper{
-  width: 100%;
-  border: 2px solid red;
-}
+
 .loadingText{
   color: white;
+}
+.welcomeText{
+  color: white;
+}
+
+.messageInputWrapper{
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  max-width: 600px;
+  gap: 4px;
+}
+.inputMsg{
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  width: 70vw;
+  font-size: large;
+  padding: 0px 4px;
+}
+.stopButton{
+  font-size: large;
+  
+  border-radius: 10px;
+  outline: none;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.homeCenter{
+  border: 2px solid red;
+
+}
+
+.firstStep h1{
+  color: violet;
+  text-align: center;
+}
+.sendButton{
+  background-color: rgb(47, 47, 177);
+  padding: 15px 15px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  font-weight: bolder;
+  font-size: large;
+  
+}
+.sendIcon{
+  background-color: rgb(47, 47, 177);
+}
+
+.strangerMsg, .yourMsg{
+  /* border:2px solid red ; */
+  border-radius: 10px;
+  padding: 14px 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 4px;
+  display: flex;
+
+}
+.actualMsg{
+  background-color: rgba(255, 255, 255,0.0001);
+  color: white;
+  border-radius: 10px;
+}
+
+.strangerWraper{
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.youWraper{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.strangerDp img{
+  width: 35px; /* Set width */
+  height: 35px; /* Set height (same as width for a circle) */
+  padding: 10px; /* Padding inside the border */
+  overflow: hidden;
 }

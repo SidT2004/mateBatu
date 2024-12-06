@@ -11,9 +11,7 @@ const HomeDesktop = ({ setIsTermsModal }) => {
     <div className="firstStep">
     
       <h1 >
-        <center>
-          Random Chatting with Mates across the university
-        </center>
+          Chatting with Mate across the university
       </h1>
       <div>
         <img src={chatHomeLogo}  alt="" />
@@ -21,9 +19,9 @@ const HomeDesktop = ({ setIsTermsModal }) => {
 
       <button
         onClick={navigateToChat }
-        className=""
+        className="startButtonHome"
       >
-        Start Chatting
+        Start Talking
       </button>
     </div>
   );

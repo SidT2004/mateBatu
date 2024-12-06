@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import TermsModal from "../components/Home/TermsModal";
+// import TermsModal from "../components/Home/TermsModal";
 import { socket } from "../Socket";
 import { useChat } from "../contextApi/ChatContext";
 import HomeDesktop from "../components/Home/HomeDesktop"; // Updated path
@@ -34,7 +34,7 @@ const Home = () => {
   }, [userId, isSearching, receiver, setReceiver, setIsSearching, setIsTyping, setMessage]);
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
+    <div className="homeCenter">
       <HomeDesktop  />
 
       
